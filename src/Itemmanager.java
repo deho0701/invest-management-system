@@ -35,8 +35,37 @@ public class Itemmanager {
 		System.out.println("Item name");
 		String name=input.next(); 
 		if(investment_item.name==name) {
-			System.out.println("Investment item to be edited is"+name);
-		}
+			int num=0;
+			while(num!=5) {		
+				System.out.println("-Invest info edit menu");
+				System.out.println("Select one");
+				System.out.println("1.edit name");
+				System.out.println("2.edit amount");
+				System.out.println("3.edit period");
+				System.out.println("4.edit target");			
+				System.out.println("5.Exit");
+				num =input.nextInt();
+				if (num==1) {
+					investment_item =new Investment_item();
+					System.out.println("Item name:");
+				}
+				else if (num==2) {
+					System.out.println("Investment amount($):");
+					investment_item.amount=input.nextInt(); 
+				}
+				else if (num==3) {
+					System.out.println("Target investment period:");
+					investment_item.period=input.next();
+				}
+				else if (num==4) {
+					investment_item.period=input.next(); 
+					System.out.println("Target return on investment(%):");
+				}
+				else  {
+					continue;
+				}
+			}
+		}	
 	}
 	public void View_investment_item() {
 		System.out.println("Item name");
