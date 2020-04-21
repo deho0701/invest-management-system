@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Invest_Management_system {
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		Itemmanager  itemmanager=new  Itemmanager(input);
+		Itemmanager itemmanager=new Itemmanager(input);
 		int num=0;
 		while(num!=7) {		
 			System.out.println("-Invest Distribution system-");
@@ -24,7 +24,7 @@ public class Invest_Management_system {
 				itemmanager.Revise_investment_item();
 			}
 			else if (num==4) {
-				itemmanager.View_investment_item();
+				itemmanager.View_investment_items();
 			}
 			else if (num==5) {
 				itemmanager.Compare_with_other_Investment_item();
