@@ -1,3 +1,4 @@
+package ITEM;
 import java.util.Scanner;
 
 public class Investment_item {
@@ -15,7 +16,8 @@ public class Investment_item {
 	public Investment_item(String name) {
 		this.name=name;
 	}
-	public Investment_item(String name, int amount,String period, int target) {
+	public Investment_item(kind kind1, String name, int amount,String period, int target) {
+		this.kind1=kind1;
 		this.name=name;
 		this.amount=amount;
 		this.period=period;
@@ -54,7 +56,23 @@ public class Investment_item {
 	}
 	
 	public void printinfo() {
-		System.out.println("name:"+this.name+" amount:"+this.amount+" period:"+this.period+" target:"+this.target);
+		String kind2="none";
+		switch(this.kind1) {
+		case money:
+			kind2="money";
+			break;
+		case stock:
+			kind2="stock";
+			break;
+		case materials:
+			kind2="materials";
+			break;
+		case bond:
+			kind2="bond";
+			break;
+		default:
+		}
+		System.out.println("kind:"+kind2+"name:"+this.name+" amount:"+this.amount+" period:"+this.period+" target:"+this.target);
 	}
 	public void getUserInput(Scanner input) {
 		
