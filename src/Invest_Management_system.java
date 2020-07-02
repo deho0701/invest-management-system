@@ -1,9 +1,18 @@
 import java.util.Scanner;
+
+import gui.Adder;
+import gui.menuselection;
+import gui.viewer;
+import gui.WindowFrame;
 public class Invest_Management_system {
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
 		Itemmanager itemmanager=new Itemmanager(input);
 		int num=0;
+		
+		WindowFrame frame = new WindowFrame();
+		//menuselection(input,itemmanager);
+		
 		while(num!=7) {		
 			System.out.println("-Invest Distribution system-");
 			System.out.println("Select one");
